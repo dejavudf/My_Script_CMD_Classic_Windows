@@ -2,11 +2,11 @@
 find /I "%1" sucesso.txt
 if %errorlevel% == 0 goto sair
 
-echo ******** SCRIPT - Instalação da superimageVirtual - AGENCIAS ********
-rem Testa de a Estação está ativa
+echo ******** SCRIPT - InstalaÃ§Ã£o da superimageVirtual ********
+rem Testa de a EstaÃ§Ã£o estÃ¡ ativa
 ping -n 8 -w 8000 %1 | find "TTL"
 IF not %ERRORLEVEL% == 0 (
-ECHO Estação %1 Inacessivel!
+ECHO EstaÃ§Ã£o %1 Inacessivel!
 echo %1>>timeout.txt
 GOTO sair
 )
