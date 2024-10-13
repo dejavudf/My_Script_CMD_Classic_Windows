@@ -81,7 +81,7 @@ echo >\\srvnumber0167\logs\pdl\%id_pdl%
 call DL_Srv
 goto sair
 
-REM - Detecta PDL da Agencia
+REM - Detecta PDL
 :no_pdl
 for /F "tokens=3 delims=_" %%d in (pdl_id.tmp) do set pdl_id=%%d
 if /I "%pdl_id%" == "%computername%" call DL_SRV
