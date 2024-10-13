@@ -1,7 +1,7 @@
 @echo off
 regedit /s rmv_vdd.reg
 REM superimage - v3.7
-REM AC/superimage/DSET
+REM superimage
 set path=%path%;%windir%\system32;%windir%;%windir%\system32\xptoupd
 
 REM checar instancia - existencia de outro processo ja rodando
@@ -99,7 +99,7 @@ REM - Maquina Nao Cadastrada para Fazer Atualizacao - Desligamento Automatico
 echo >erro_cad.sra
 goto sair
 
-REM - Problema na resolução de nome(DNS)
+REM - Problema na resoluÃ§Ã£o de nome(DNS)
 :erro_dns
 echo >erro_dns.sra
 set srv_upd=10.8.32.58
