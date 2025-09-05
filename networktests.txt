@@ -1,0 +1,59 @@
+
+-> SCRIPT TEST TRACE ROUTE #1
+@echo off
+:loop
+echo Running tracert to example.com at %time%
+tracert -d 192.168.140.4 >> c:\temp\TLOG1.txt
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST TRACE ROUTE #2
+@echo off
+:loop
+echo Running tracert to example.com at %time%
+tracert -d 192.168.140.5 >> c:\temp\TLOG2.txt
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST PING ICMP #1
+@echo off
+:loop
+ping 192.168.140.4 -t -n 300 >> c:\temp\PLOG1.txt 
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST PING ICMP #2
+@echo off
+:loop
+ping 192.168.140.5 -t -n 300 >> c:\temp\PLOG2.txt
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST AD LDAP #1
+@echo off
+:loop
+nslookup -type=all ldap._tcp.test.net 192.168.140.4 >> c:\temp\LLOG1.txt 
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST AD LDAP #2
+@echo off
+:loop
+nslookup -type=all ldap._tcp.test.net 192.168.140.5 >> c:\temp\LLOG2.txt 
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST KERBEROS #1
+@echo off
+:loop
+nslookup -type=all _kerberos._tcp.test.net 192.168.140.4 >> c:\temp\KLOG1.txt 
+timeout /t 5 >nul
+goto loop
+
+-> SCRIPT TEST KERBEROS #2
+@echo off
+:loop
+nslookup -type=all _kerberos._tcp.test.net 192.168.140.5 >> c:\temp\KLOG2.txt 
+timeout /t 5 >nul
+goto loop
+
