@@ -3,7 +3,7 @@
 REM variables
 set VAR_DATE_START=%date%
 set VAR_TIME_START=%time%
-set VAR_COUNT=10
+set VAR_COUNT=300
 
 REM script
 :inicio
