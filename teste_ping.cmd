@@ -5,5 +5,6 @@ del *_ping.log
 for /F "tokens=1" %%a in (ips.txt) do start /min tping.cmd %%a &
 
 :tempo
-timeout /t 15
+timeout /t 330
+
 goto inicio
